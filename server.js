@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const app = require("./app");
 
 const PORT = process.env.PORT;
-console.log("dddddddddddddd", process.env.MONGO_URL);
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {

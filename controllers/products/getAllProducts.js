@@ -2,6 +2,7 @@
 const Product = require("../../models/productSchema");
 
 const getAllProducts = async (req, res) => {
+  // console.log(req.user);
   const products = await Product.find();
   if (!products) {
     throw HttpError(404);

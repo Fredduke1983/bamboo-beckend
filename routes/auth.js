@@ -1,9 +1,8 @@
 const express = require("express");
-const { registerUserController } = require("../controllers/auth/register");
-const User = require("../models/userSchema");
-const isUniqueUser = require("../middlewares/isUniqueUser");
+const registerUserController = require("../controllers/auth/register");
 const loginUserController = require("../controllers/auth/login");
 const getCurrentUser = require("../controllers/auth/currentUser");
+const isUniqueUser = require("../middlewares/isUniqueUser");
 const authenticate = require("../middlewares/authenticate");
 
 const router = express.Router();

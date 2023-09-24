@@ -24,6 +24,10 @@ const userSchema = mongoose.Schema(
     token: {
       type: String,
     },
+
+    testimonials: {
+      type: [],
+    },
   },
   { versionKey: false }
 );

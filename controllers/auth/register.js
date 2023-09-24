@@ -23,4 +23,4 @@ const registerUserController = catchAsync(async (req, res) => {
   });
 });
 
-module.exports = { registerUserController };
+module.exports = registerUserController;

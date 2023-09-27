@@ -16,10 +16,11 @@ const productSchema = new mongoose.Schema(
     },
     rating: {
       type: String,
+      default: "1",
     },
-    id: {
+
+    public_id: {
       type: String,
-      required: true,
     },
   },
   { versionKey: false }

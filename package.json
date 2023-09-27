@@ -38,6 +38,9 @@
     "eslint-plugin-react": "^7.33.2",
     "nodemon": "2.0.15"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

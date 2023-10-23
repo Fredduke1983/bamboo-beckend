@@ -12,10 +12,15 @@ const registerUserController = catchAsync(async (req, res) => {
   const hashedPass = bcrypt.hashSync(password, salt);
 
   if (error) {
-    return errorsCatcher(504, `Incorrect ${error.details[0].path[0]}`);
+    return errorsCatcher(403, `Incorrect ${error.details[0].path[0]}`);
   }
 
-  const newUser = await User.create({ name, email, password: hashedPass });
+  const newUser = await User.create({
+    name,
+    email,
+    password: hashedPass,
+    token: "",
+  });
 
   res.status(201).json({
     msg: "New user added",

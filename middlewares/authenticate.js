@@ -7,6 +7,11 @@ const catchAsync = require("../utils/catchAsync");
 const authenticate = catchAsync(async (req, res, next) => {
   const { SECRET_KEY } = process.env;
   const { authorization } = await req.headers;
+  if (!authorization) {
+    console.log("no authorization token ");
+    return;
+  }
+
   const [bearer, token] = authorization.split(" ");
 
   try {

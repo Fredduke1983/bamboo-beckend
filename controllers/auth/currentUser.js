@@ -5,8 +5,8 @@ const catchAsync = require("../../utils/catchAsync");
 
 const getCurrentUser = catchAsync(async (req, res) => {
   const { id: paramsId } = req.params;
-  const isCorrectToken = ObjectId.isValid(paramsId);
-  if (!isCorrectToken) {
+  const isCorrectID = ObjectId.isValid(paramsId);
+  if (!isCorrectID) {
     errorsCatcher(400, "incorrect id");
   }
 

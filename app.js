@@ -5,6 +5,7 @@ const logger = require("morgan");
 const productsRouter = require("./routes/products");
 const authRouter = require("./routes/auth");
 const testimonialsRouter = require("./routes/testimonials");
+const authenticate = require("./middlewares/authenticate");
 
 require("dotenv").config();
 

@@ -1,4 +1,6 @@
-const errorsCatcher = (statusCode, errorMsg) => {
+const catchAsync = require("./catchAsync");
+
+const errorsCatcher = (statusCode = 500, errorMsg) => {
   const newError = new Error(errorMsg);
 
   newError.status = statusCode;
